@@ -1,0 +1,177 @@
+.banner{
+    width: 1000px;
+    margin: 100px auto;
+}
+.banner-top{
+    width: 520px;
+    height: 280px;
+    position: relative;
+    overflow: hidden;
+}
+.banner-top .lunbo{
+    width: 40000px;
+    position: absolute;
+}
+.banner-top .lunbo img{
+    display: block;
+    float: left;
+}
+.banner-top ul{
+    border-radius: 50%;
+    position: absolute;
+    bottom: 20px;
+    right:50%;
+    margin-right: -40px;
+    background: rgba(255,255,255,0.5);
+}
+.banner-top ul li{
+    width: 10px;
+    height: 10px;
+    background: #cccccc;
+    margin-left: 5px;
+    border-radius: 50%;
+    float: left;
+    cursor: pointer;
+}
+.banner-top ul li:last-of-type{
+    margin-right: 5px;
+}
+.banner-top ul .col{
+    background: red;
+}
+.banner-top .click{
+    display: none;
+}
+.banner-top .click div{
+    width: 30px;
+    height: 50px;
+    background: #cccccc;
+    font:30px/50px "simsun";
+    color: white;
+    position: absolute;
+    top:50%;
+    margin-top: -25px;
+    text-align: center;
+    cursor: pointer;
+}
+.banner-top .click .prev{
+    left: 0;
+}
+.banner-top .click .next{
+    right: 0;
+}
+.banner-top:hover .click{
+    display: block;
+}
+.banner .zi{
+    font: 15px/30px "";
+    background: #cccccc;
+    width: 520px;
+}
+.banner .zi p{
+    float: left;
+}
+.banner .zi h5{
+    float: right;
+}
+.banner .zi span{
+    font: bold 20px/30px "";
+}
+.banner-bot ul li{
+    width: 520px;
+    height: 201px;
+    float: left;
+}
+.banner-bot ul li:first-of-type img{
+    width: 173px;height: 100px;
+    float: left;
+}
+.banner-bot ul li:nth-of-type(2) img{
+    width:130px;height: 201px;
+    float: left;
+}
+.banner-bot ul li:nth-of-type(3) img{
+    width:130px;height: 201px;
+    float: left;
+}
+.banner-bot ul li:nth-of-type(4) img{
+    width:130px;height: 68px;
+    float: left;
+}
+.banner-bot ul li:nth-of-type(5) img{
+    width:251px;height: 190px;
+    float: left;
+}
+.banner-bot ul li:nth-of-type(6) img{
+    width:251px;height: 190px;
+    float: left;
+}
+.banner-bot ul li:last-of-type img{
+    width: 173px;height: 100px;
+    float: left;
+}
+.banner-bot .box ul{
+    width: 40000px;
+    position: absolute;
+}
+.banner-bot{
+    position: relative;
+    width: 520px;
+    height: 201px;
+    overflow: hidden;
+}
+.banner-bot .box{
+    width: 520px;
+    height: 201px;
+    overflow: hidden;
+}
+.banner-bot:hover .click{
+    display: block;
+}
+.banner-bot ol li{
+    width: 10px;
+    height: 10px;
+    background: #cccccc;
+    margin-left: 5px;
+    border-radius: 50%;
+    float: left;
+    cursor: pointer;
+}
+.banner-bot ol li:last-of-type{
+    margin-right: 5px;
+}
+.banner-bot ol{
+    border-radius: 50%;
+    position: absolute;
+    bottom: 20px;
+    right:50%;
+    margin-right: -40px;
+    background: rgba(255,255,255,0.5);
+}
+.banner-bot .click{
+    display: none;
+}
+.banner-bot .click div{
+    width: 30px;
+    height: 50px;
+    background: #cccccc;
+    font:30px/50px "simsun";
+    color: white;
+    position: absolute;
+    top:50%;
+    margin-top: -25px;
+    text-align: center;
+    cursor: pointer;
+}
+.banner-bot .click .prev{
+    left: 0;
+}
+.banner-bot .click .next{
+    right: 0;
+}
+.banner-bot:hover .click{
+    display: block;
+}
+.banner-bot .col{
+    background: red;
+}

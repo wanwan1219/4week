@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            background: pink;
+            position: relative;
+        }
+        .box1{
+            width: 200px;
+            height: 200px;
+            background: blue;
+            display: none;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <div class="box1"></div>
+</div>
+</body>
+<script src="jq/jquery-1.8.3.min.js"></script>
+<script>
+    $(".box").mousemove(function(e){
+        $(".box1").css({left:5+ e.pageX,top:10+ e.pageY})
+    }).hover(function(){
+        $(".box1").show()
+    },function(){
+        $(".box1").hide()
+    })
+
+</script>
+</html>

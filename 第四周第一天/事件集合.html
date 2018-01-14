@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        input{
+            border:1px solid yellow;
+        }
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: hotpink;
+            padding-left: 30px;
+            margin-left: 30px;
+        }
+    </style>
+</head>
+<body>
+<input type="text">
+<div class="box">
+
+</div>
+</body>
+<script src="jq/jquery-1.8.3.min.js"></script>
+<script>
+//    blur   /*input标签失去焦点的时候触发  需要点外部一下才能触发失去焦点*/
+//    focus   /*input标签获取焦点的时候触发*/
+    $("input").blur(function(){
+        $(this).css({border:"10px solid black"})
+    });
+    $("input").focus(function(){
+        $(this).css({border:"10px solid red"})
+    });
+
+//    鼠标按下 mousedown
+//    鼠标抬起 mouseup
+    $(".box").mousedown(function(){
+        i="mousedown";
+        console.log(i);
+    });
+    $(".box").mouseup(function(){
+        i="mouseup";
+        console.log(i);
+    });
+
+
+//    keydown 键盘按下
+    $("input").keydown(function(e){
+        console.log(e.key); /*可以区分大小写*/
+        if(e.key=="Enter"){
+            console.log("已按下回车")
+        }
+        else{
+            console.log("没按回车")
+        }
+    });
+
+//    mousemove 鼠标的抚摸事件(鼠标在当前元素上移动的时候)  用来确定鼠标的位置
+       /*针对当前页面的坐标 pageX pageY 竖直滚动条所有的都算上
+       *针对当前窗口左上角的00点的坐标 clientX clientY
+       *针对自身的左上角位置00点的坐标 offsetX offsetY 不算margin值
+       *针对整个屏幕的左上角00点的坐标 screenX screenY
+       * */
+    $(".box").mousemove(function(e){
+        console.log("x值"+e.offsetX+"y值"+ e.offsetY)
+    })
+
+
+
+</script>
+</html>

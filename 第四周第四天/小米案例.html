@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        li{
+            list-style: none;
+        }
+        .box{
+            width: 1150px;
+            height: 400px;
+            margin: 100px auto;
+            overflow: hidden;
+        }
+        .box ul li{
+            width: 240px;
+            height: 400px;
+            float: left;
+            overflow: hidden;
+        }
+        .box ul{ /*默认宽是100% 相对于父级*/
+            width: 2000px;/* 在动的时候会超出ul的宽度 所以要设到特别宽才不会影响*/
+        }
+        .box ul li img{
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+<!--banner图一般：手风琴（小米），淡入淡出（京东），滑动（淘宝）-->
+<div class="box">
+    <ul>
+        <li><img src="images/1.jpg" alt=""></li>
+        <li><img src="images/2.jpg" alt=""></li>
+        <li><img src="images/3.jpg" alt=""></li>
+        <li><img src="images/4.jpg" alt=""></li>
+        <li><img src="images/5.jpg" alt=""></li>
+        <div style="clear: both"></div>
+    </ul>
+</div>
+</body>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script>
+    $(".box ul li").hover(function(){
+        $(this).stop().animate({width:800},500).siblings().stop().animate({width:100},500)
+    },function(){
+        $(".box ul li").stop().animate({width:250},500)
+    })
+</script>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        li{
+            list-style: none;
+        }
+        .box{
+            width: 600px;
+            height: 300px;
+            border: 3px solid black;
+            margin: 100px auto 0;
+            overflow: hidden;
+            position: relative;
+        }
+        .box ul li{
+            width: 600px;
+            height: 300px;
+            font: 60px/300px "simsun";
+            text-align: center;
+            background: pink;
+            float: left;
+        }
+        .box ul{
+            width: 4000px;/*至少是600*5*/
+            position: absolute;
+            top:0;
+            left: 0;
+        }
+        .box ol{
+            width: 140px;
+            height: 20px;
+            background: red;
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            margin-left: -70px;
+        }
+        .box ol li{
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background:yellow ;
+            float: left;
+        }
+        .box ol li+li{
+            margin-left: 10px ;
+        }
+        .box ol .col{
+            background: black;
+        }
+        .box .click{
+            display: none;
+        }
+        .box .click div{
+            background: #c7c7c7;
+            color: white;
+            font: 30px/50px "simsun";
+            width: 20px;
+            height: 50px;
+            position: absolute;
+            top:50%;
+            margin-top: -25px;
+            cursor: pointer;
+        }
+        .box .click .prev{
+            left: 0;
+        }
+        .box .click .next{
+            right: 0;
+        }
+        .box:hover .click{
+            display: block;
+        }
+    </style>
+</head>
+<body onselectstart="return false">
+<div class="box">
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>1</li>
+    </ul>
+    <ol>
+        <li class="col"></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ol>
+    <div class="click">
+        <div class="prev">&lt;</div>
+        <div class="next">&gt;</div>
+    </div>
+</div>
+</body>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script>
+    var wid=$(".box ul li").width();
+    var len=$(".box ul li").length;
+    var index=0;
+    var hhh=0;
+    var fa=true; /*节流阀*/
+    $(".box ol li").click(function(){
+        index=$(this).index();   /*ul li的索引*/
+        hhh=$(this).index();   /*ol li的索引*/
+        $(".box ol li").removeClass("col").eq(hhh).addClass("col");
+        $(".box ul").animate({left:-(wid *index)},500)
+    });
+
+
+
+        function right(){
+            if(fa==true){
+                fa=false;
+            index++;
+            if(index>len-1){
+                index=1;  /*直接到第二张图片*/
+                $(".box ul").css({left:0}); /*瞬间滑动到第一张图*/
+            }
+            hhh++;
+            if(hhh>len-2){
+                hhh=0
+            }
+            $(".box ol li").removeClass("col").eq(hhh).addClass("col");
+            $(".box ul").stop().animate({left:-(wid*index)},500,function(){
+                fa=true
+            });
+        }
+    }
+
+    $(".box .click .next").click(function(){
+        right()
+    });
+
+
+    $(".box .click .prev").click(function(){
+        if(fa==true){
+            fa=false;
+            index--;
+            if(index<0){
+                index=len-2;
+                $(".box ul").css({left:-(len-1)*wid});
+//            $(".box ul").animate({left:-(wid*(index+1))},0)
+            }
+            hhh--;
+            if(hhh<0){
+                hhh=len-2
+            }
+            $(".box ol li").removeClass("col").eq(hhh).addClass("col");
+            $(".box ul").stop().animate({left:-(wid*index)},500,function(){fa=true});
+            /*回调函数 在执行完之后才会触发回调函数 没完成的时候 fa=false 不执行*/
+
+        }
+        });
+//        index--;
+//        if(index<0){
+//            index=len-2;
+//            $(".box ul").css({left:-(len-1)*wid});
+////            $(".box ul").animate({left:-(wid*(index+1))},0)
+//        }
+//        hhh--;
+//        if(hhh<0){
+//            hhh=len-2
+//        }
+//        $(".box ul").stop().animate({left:-(wid*index)},500);
+//        $(".box ol li").removeClass("col").eq(hhh).addClass("col");
+//    });
+    var timer=setInterval(right,2000);
+    $(".box").hover(function(){
+        clearInterval(timer)
+    },function(){
+        timer=setInterval(right,2000)
+    })
+
+
+
+</script>
+</html>

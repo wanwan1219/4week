@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>百叶图</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        ul{
+            list-style: none;
+            width: 1000px;
+        }
+        .box{
+            width:640px;
+            height:320px;
+            margin:100px auto 0;
+            overflow:hidden;
+        }
+        li{
+            width:80px;
+            height:320px;
+            overflow: hidden;
+            float:left;
+        }
+        ul li img{
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <ul>
+        <li><img src="img/pic1.jpg"/></li>
+        <li><img src="img/pic2.jpg"/></li>
+        <li><img src="img/pic3.jpg"/></li>
+        <li><img src="img/pic4.jpg"/></li>
+        <li><img src="img/pic5.jpg"/></li>
+        <li><img src="img/pic6.jpg"/></li>
+        <li><img src="img/pic7.jpg"/></li>
+        <li><img src="img/pic8.jpg"/></li>
+    </ul>
+</div>
+</body>
+<script src="jq/jquery-1.8.3.min.js"></script>
+<script>
+    $(".box ul li").hover(function(){
+        $(this).stop().animate({width:430},200).siblings().stop().animate({width:30},200)
+    },function(){
+        $(".box ul li").stop().animate({width:80},200)
+    });
+</script>
+</html>

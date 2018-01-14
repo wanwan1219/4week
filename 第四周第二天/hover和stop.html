@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/header.css">
+</head>
+<body>
+<div class="header">
+    <div class="inner clear">
+        <a href=""><span>首页</span></a>
+        <a href=""><span>新品</span></a>
+        <a href=""><span>秋装汇聚</span></a>
+        <a href="" class="dow">
+            <span>周二上心</span>
+            <ul class="ul1">
+                <li>9月16日</li>
+                <li>9月2日</li>
+                <li>8月21日</li>
+            </ul>
+        </a>
+        <a href="" class="dow">
+            <span>外套</span>
+            <ul>
+                <li>风衣</li>
+                <li>小西装</li>
+                <li>马甲</li>
+                <li>春秋外套</li>
+                <li>短款外套</li>
+            </ul>
+        </a>
+        <a href="" class="dow">
+            <span>外套</span>
+            <ul>
+                <li>T恤</li>
+                <li>雪纺衣</li>
+                <li>套装</li>
+                <li>衬衫</li>
+            </ul>
+        </a>
+        <a href="" class="dow">
+            <span>裙装</span>
+            <ul>
+                <li>连衣裙</li>
+                <li>半身裙</li>
+            </ul>
+        </a>
+        <a href="" class="dow">
+            <span>裤装</span>
+            <ul>
+                <li>牛仔裤</li>
+                <li>长裤</li>
+                <li>短裤</li>
+                <li>连体裤</li>
+                <li>哈伦裤</li>
+                <li>打底裤</li>
+            </ul>
+        </a>
+        <a href=""><span>针织衫</span></a>
+        <a href=""><span>毛衣</span></a>
+        <a href="" class="dow">
+            <span>风格</span>
+            <ul>
+                <li>纯美淑女</li>
+                <li>休闲可爱</li>
+                <li>职场女性</li>
+                <li>学院风系</li>
+                <li>萌系</li>
+            </ul>
+        </a>
+        <a href="" class="dow">
+            <span>其他</span>
+            <ul>
+                <li>春夏新款</li>
+                <li>特价区</li>
+                <li>秋装新款</li>
+            </ul>
+        </a>
+    </div>
+</div>
+</body>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script>
+    //$(".dow").mouseenter(function(){
+    //    $(this).find("ul").stop().slideDown(500);
+    //});
+    //$(".dow").mouseleave(function(){
+    //    $(this).find("ul").slideUp(500);
+    //});
+
+
+
+    $(".dow").hover(function(){$(this).find("ul").stop().slideDown(500);}
+            ,function(){$(this).find("ul").stop().slideUp(500);});
+
+    //hover是把enter和leave结合在了一起
+    /*hover(function(){})  等于mouseenter(function(){})  只写一个表示只有enter一个事件
+     * hover(function(){},function(){})   表示两个事件enter和leave
+     * */
+    // stop()表示停止之前的动画 执行后面的动画
+    /*stop(true)停止所有的动画
+     /*stop(true,true)停止所有的动画,但是当前的正在执行的动画立即执行完成
+     * */
+</script>
+
+</html>

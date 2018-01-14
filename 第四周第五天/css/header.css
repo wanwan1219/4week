@@ -1,0 +1,197 @@
+body{
+    font-family: "微软雅黑";
+}
+.inner{
+    width: 1300px;
+    margin: auto;
+}
+.header{
+    height: 45px;
+    width: 100%;
+    background: url("../images/shiti2_03.png"),repeat-x;
+}
+.header ul li{
+    font: 17px/45px "";
+    float: left;
+    color: white;
+    padding:0 30px;
+    position: relative;
+    cursor: pointer;
+}
+.header ul li span{
+    width: 0;
+    height: 0;
+    border: 5px solid transparent;
+    line-height: 45px;
+    display: inline-block;
+    border-top:5px solid white;
+}
+.header ul li:hover{
+    background: red;
+}
+.header ul li .menu{
+    width: 100%;
+    line-height: 50px;
+    color:black;
+    background: white;
+    text-align: center;
+    position: absolute;
+    top: 45px;
+    left: 0;
+    display: none;
+    z-index: 999;
+}
+.header ul li .menu p{
+    border: 1px solid red;
+}
+.banner{
+    background: black;
+    padding-top: 40px;
+    padding-bottom: 30px;
+}
+.banner .ban-lt{
+    float: left;
+}
+.banner .ban-rt{
+    /*float: right;*/
+}
+.ban-lt .lunbo{
+    position: relative;
+    width: 490px;
+    height: 400px;
+    overflow: hidden;
+    margin-right: 20px;
+}
+.ban-lt .lunbo ul{
+    width: 5000px;
+    position: absolute;
+}
+.ban-lt .lunbo ul li{
+    float: left;
+}
+.ban-lt .lunbo .click div{
+    width: 30px;
+    height: 90px;
+    font:900 40px/90px "";
+    position: absolute;
+    color: white;
+    top:50%;
+    margin-top: -45px;
+    background: #cccccc;
+    cursor: pointer;
+}
+.ban-lt .lunbo .click{
+    display: none;
+}
+.ban-lt .lunbo:hover .click{
+    display: block;
+}
+.ban-lt .lunbo .click .next{
+    right: 0;
+}
+.banner .zi{
+    height: 40px;
+    font:15px/40px "";
+    color: white;
+}
+.banner .zi .zi-1{
+    float: left;
+}
+.banner .zi ol{
+    float: right;
+    padding-top: 15px;
+}
+.banner .zi ol li{
+    float: left;
+    margin-right: 20px;
+    width: 10px;
+    height: 10px;
+    background: white;
+    cursor: pointer;
+}
+.banner .zi ol .col{
+    background: red;
+}
+.ban-rt ul li{
+    float: left;
+    width: 235px;
+    position: relative;
+    margin-right: 15px;
+}
+.ban-rt ul li:first-of-type{
+    width: 490px;
+}
+.ban-rt ul li .yin{
+    text-align: center;
+    line-height: 175px;
+    width:100%;
+    background: rgba(0,0,0,0.7);
+    display: none;
+    position: absolute;
+    top: 175px;
+}
+.ban-rt ul li:hover .yin{
+    display: block;
+    top:0;
+}
+.ban-rt ul li p{
+    color: white;
+    font:13px/50px "";
+}
+.ban-rt ul li:hover p{
+    color: red;
+}
+.banner2 .ban2-lt{
+    float: left;
+    /*width: 620px ;*/
+}
+.banner2{
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.banner2 .ban2-rt{
+    float: right;
+}
+.banner2 .ban2-lt img{
+    float: left;
+}
+.banner2 .ban2-rt img{
+    float: left;
+}
+.dw{
+    float: left;
+    width: 369px;
+    margin-right: 20px;
+    margin-left: 10px;
+}
+.dw .p1{
+    font:900 17px/30px "";
+    color: cornflowerblue;
+}
+.dw .p2{
+    font:13px/20px "";
+    color: #c7c7c7;
+    margin-bottom: 20px;
+}
+.dw .p3{
+    font:15px/20px "";
+    color: black;
+}
+.footer .p4{
+    font: 15px/40px "";
+    text-align: center;
+    color: cornflowerblue;
+    background:rgba(227,227,227,.9);
+}
+.footer .hide{
+    display: none;
+}
+.footer .hide .footer-lt{
+    float: left;
+}
+.footer .hide .footer-rt{
+    float: right;
+}
+.footer .hide img{
+    float: left;
+}

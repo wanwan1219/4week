@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="box3">3333</div>
+<div class="box">
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+</div>
+<div class="box2">2222</div>
+</body>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script>
+//    append()把括号内的元素添加到选中的元素的末尾去 不新建 直接扔进去
+//    appendTo()把选中的元素添加到括号内的元素的末尾去 不新建 直接扔进去
+    $(".box").append($(".box2"));  /*把box2添加到box里面去 成为box的子元素 且是最后一个子元素*/
+    $(".box").appendTo($(".box2"));  /*把box添加到box2里面去 成为box2的子元素 且是最后一个子元素*/
+
+
+
+//     prepend()把括号内的元素添加到选中的元素的开头去  不新建 直接扔进去
+//     prependTo()把选中的元素添加到括号内的元素的开头去  不新建 直接扔进去
+    $(".box").prepend($(".box2"))/*把box2添加到box里面 成为box的子元素 且是第一个*/
+    $(".box").prependTo($(".box2"))/*把box添加到box2里面 成为box2的子元素 且是第一个*/
+
+
+
+//     before()把括号内的元素添加到选中元素的前面（上一个）
+//     after()把括号内的元素添加到选中元素的后面（下一个）
+
+
+    //wrap()用括号内的元素包裹住选中的元素 与appendTo类似 区别是新建一个括号内的元素来包裹住选中的元素
+    //remove()删除选中的元素
+    //replace("2222","4444")不在页面中显示 但是会在控制台中显示  替换文本 括号内两个参数 后面的替换前面的
+
+    $(".box2").html().replace("2","4") /*只替换一个字符*/
+    //replaceAll("")用选中的的替换括号内的 替换标签
+    $(".box2").replaceAll("li")/*用box2替换li*/
+    //empty()把选中元素清空 只清空子元素 不删除自己 与remove不同  remove是把自己也删除掉
+
+
+
+
+
+</script>
+</html>

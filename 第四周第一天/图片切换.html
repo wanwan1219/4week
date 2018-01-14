@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        li{
+            list-style: none;
+        }
+        .box{
+            width: 480px;
+            height: 320px;
+            overflow: hidden;
+            position: relative;
+            margin: auto;
+        }
+        .clik div{
+            position: absolute;
+            top:50%;
+            margin-top: -25px;
+            width: 20px;
+            height: 50px;
+            font: 900 20px/50px "simsun";
+            background:#c7c7c7;
+            display: none;
+            cursor: pointer;
+        }
+        .prev{
+            left: 0;
+        }
+        .next{
+            right: 0;
+        }
+        .box:hover .clik div{
+            display: block;
+        }
+        ol li{
+            width: 20px;
+            height: 20px;
+            background: peachpuff;
+            border-radius: 50%;
+            line-height: 20px;
+            float: left;
+            cursor: pointer;
+            text-align: center;
+        }
+        ol li+li{
+            margin-left: 5px;
+        }
+        ol{
+            position: absolute;
+            bottom: 5px;
+            left: 50%;
+            margin-left: -47.5px;
+        }
+        ol .col{
+            background: red;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <ul>
+        <li><img src="img/img/1.jpg" alt=""></li>
+        <li><img src="img/img/2.jpg" alt=""></li>
+        <li><img src="img/img/3.jpg" alt=""></li>
+        <li><img src="img/img/4.jpg" alt=""></li>
+    </ul>
+    <div class="clik">
+        <div class="prev">&lt;</div>
+        <div class="next">&gt;</div>
+    </div>
+    <ol>
+        <li class="col">1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ol>
+</div>
+</body>
+<script src="jq/jquery-1.8.3.min.js"></script>
+<script>
+    var k=0;
+    var len=$("ul li").length;
+    var right=function(){
+        k++;
+        if(k>len-1){
+            k=0;
+        }
+        $("ul li").hide().eq(k).show()
+        $("ol li").removeClass("col").eq(k).addClass("col")
+    };
+
+
+    $(".box .next").click(function(){
+        right();
+    });
+    $(".box .prev").click(function(){
+        k--;
+        if(k<0){
+            k=len-1;
+        }
+        $("ul li").hide().eq(k).show();
+        $("ol li").removeClass("col").eq(k).addClass("col")
+    });
+
+
+    $("ol li").click(function(){
+        $(this).addClass("col").siblings().removeClass("col")
+    });
+
+    var timer1=null;
+    $("ol li").mouseover(function(){
+        clearTimeout(timer1);
+        var g=$(this);
+        timer1=setTimeout(function(){
+            g.addClass("col").siblings().removeClass("col");
+            k=g.index();
+            $(".box ul li").hide().eq(k).show();
+        },200)
+
+    });
+
+    var timer=setInterval(right,2000);
+    $(".box").mouseover(function(){
+        clearInterval(timer);
+    });
+    $(".box").mouseout(function(){
+        timer=setInterval(right,2000)
+    })
+</script>
+</html>

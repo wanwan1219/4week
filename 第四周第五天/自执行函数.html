@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+
+
+
+//    自执行函数  (function(){})();  一定要加分号 两个自执行函数互不影响
+(function(){
+    var index=3;
+    console.log(index); /* 打印3*/
+})();
+(function(){
+    console.log(index);/* undefined*/
+    var index=4;
+    console.log(index); /*打印4*/
+})();
+
+</script>
+</html>

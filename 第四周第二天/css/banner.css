@@ -1,0 +1,166 @@
+.inner{
+    width: 1000px;
+    margin: auto;
+}
+.ban-lt{
+    float: left;
+}
+.ban-rt{
+    float: right;
+}
+.ban-lt .ban-lt-top .ban-lun1{
+    width: 520px;
+    height: 280px;
+    overflow: hidden;
+    position: relative;
+    float: left;
+}
+.ban-lt .ban-lt-top .ban-lun1 ul li{
+    width: 10px;
+    height: 10px;
+    background: #cccccc;
+    margin-left: 5px;
+    border-radius: 50%;
+    float: left;
+    cursor: pointer;
+}
+.ban-lt .ban-lt-top .ban-lun1 ul li:last-of-type{
+    margin-right: 5px;
+}
+.ban-lt .ban-lt-top .ban-lun1 ul{
+    border-radius: 50%;
+    position: absolute;
+    bottom: 20px;
+    right:50%;
+    margin-right: -40px;
+    background: rgba(255,255,255,0.5);
+}
+.ban-lt .ban-lt-top .ban-lun1 ul .col{
+    background: red;
+}
+.ban-lt .click{
+    display: none;
+}
+.ban-lt .click div{
+    width: 30px;
+    height: 50px;
+    background: #cccccc;
+    font:30px/50px "simsun";
+    color: white;
+    position: absolute;
+    top:50%;
+    margin-top: -25px;
+    text-align: center;
+    cursor: pointer;
+}
+.ban-lt .click .prev{
+    left: 0;
+}
+.ban-lt .click .next{
+    right: 0;
+}
+.ban-lt .ban-lt-top .ban-lun1:hover .click{
+    display: block;
+}
+.ban-lt .ban-lt-top .ban-no-lun1{
+    float: left;
+}
+.ban-lt .ban-lt-bot{
+    width: 680px;
+}
+.ban-lt .ban-lt-bot p{
+    font: 5px/15px "";
+    background: #cccccc;
+}
+.ban-lt .ban-lt-bot p span{
+    font: bold 10px/15px "";
+}
+.ban-lt .ban-lt-bot .ban-lun2 ul li:first-of-type img{
+    width: 173px;height: 100px;
+    float: left;
+}
+.ban-lt .ban-lt-bot .ban-lun2 ul li:nth-of-type(2) img{
+    width:130px;height: 201px;
+    float: left;
+}
+.ban-lt .ban-lt-bot .ban-lun2 ul li:nth-of-type(3) img{
+    width:130px;height: 201px;
+    float: left;
+}
+.ban-lt .ban-lt-bot .ban-lun2 ul li:nth-of-type(4) img{
+    width:130px;height: 68px;
+    float: left;
+}
+.ban-lt .ban-lt-bot .ban-lun2 ul li:nth-of-type(5) img{
+    width:251px;height: 190px;
+    float: left;
+}
+.ban-lt .ban-lt-bot .ban-lun2 ul li:nth-of-type(6) img{
+    width:251px;height: 190px;
+    float: left;
+}
+.ban-lt .ban-lt-bot .ban-lun2{
+    width: 520px;
+    height: 201px;
+    overflow: hidden;
+    position: relative;
+}
+.ban-lt .ban-lt-bot .ban-lun2:hover .click{
+    display: block;
+}
+.ban-lt .ban-lt-bot .ban-lun2 ol li{
+    width: 10px;
+    height: 10px;
+    background: #cccccc;
+    margin-left: 5px;
+    border-radius: 50%;
+    float: left;
+    cursor: pointer;
+}
+.ban-lt .ban-lt-bot .ban-lun2 ol li:last-of-type{
+    margin-right: 5px;
+}
+.ban-lt .ban-lt-bot .ban-lun2 ol{
+    border-radius: 50%;
+    position: absolute;
+    bottom: 20px;
+    right:50%;
+    margin-right: -40px;
+    background: rgba(255,255,255,0.5);
+}
+.ban-lt .ban-lt-bot .ban-lun2 ol .col{
+    background: red;
+}
+.ban-lt .ban-lt-bot .kug2{
+    float: left;
+}
+.ban-lt .ban-lt-bot .ban-no-lun2{
+    float: left;
+}
+.ban-rt .ban-rt-top{
+    width: 290px;
+    height: 167px;
+    background: pink;
+}
+.ban-rt .ban-rt-mid{
+    background: lightgrey;
+    width: 290px;
+    height: 141px;
+}
+.ban-rt .ban-rt-bot{
+    width: 290px;
+    height: 201px;
+    overflow: hidden;
+}
+.ban-rt .ban-rt-bot ul li{
+    width: 72px;
+    height: 69px;
+    float: left;
+}
+.ban-rt .ban-rt-bot ol li{
+    width: 308px;
+    height: 155px;
+}
+
+
+
